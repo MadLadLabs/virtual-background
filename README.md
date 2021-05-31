@@ -12,9 +12,13 @@ docker run -e DISPLAY=$DISPLAY \
     --gpus all \
     spiridonovpolytechnic/virtual-background:latest
 ```
+~~~
+docker build -t vb .
 
 docker run -e DISPLAY=$DISPLAY \
     --device=/dev/video0:/dev/video0 \
+    --device=/dev/video10:/dev/video20 \
     -v /tmp/.X11-unix:/tmp/.X11-unix \
     --gpus all \
     vb
+~~~
